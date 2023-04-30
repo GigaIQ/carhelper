@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/informationFragment">
+    <fragment
+        android:id="@+id/informationFragment"
+        android:name="ru.vsu.cs.polev.InformationFragment"
+        android:label="InformationFragment" >
+        <action
+            android:id="@+id/action_informationFragment_to_expensesFragment"
+            app:destination="@id/expensesFragment" />
+        <action
+            android:id="@+id/action_informationFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_informationFragment_to_newFuelFragment"
+            app:destination="@id/newFuelFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/expensesFragment"
+        android:name="ru.vsu.cs.polev.ExpensesFragment"
+        android:label="fragment_expenses"
+        tools:layout="@layout/fragment_expenses" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="ru.vsu.cs.polev.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/newFuelFragment"
+        android:name="ru.vsu.cs.polev.NewFuelFragment"
+        android:label="fragment_new_fuel"
+        tools:layout="@layout/fragment_new_fuel" />
+</navigation>

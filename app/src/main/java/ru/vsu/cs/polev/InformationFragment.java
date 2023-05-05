@@ -3,6 +3,9 @@ package ru.vsu.cs.polev;
 import static android.content.Context.MODE_PRIVATE;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
+import android.app.DatePickerDialog;
+import android.content.DialogInterface;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -25,6 +28,10 @@ import ru.vsu.cs.polev.databinding.FragmentInformationBinding;
 public class InformationFragment extends Fragment {
 
     FragmentInformationBinding binding;
+
+    private AlertDialog dialog;
+    private AlertDialog.Builder builder;
+    private String[] items = {"Да", "Нет"};
 
     String gotResponse = "";
     String finishPrice = "...";
@@ -74,10 +81,36 @@ public class InformationFragment extends Fragment {
         }
 
         binding.cleanInfoButton.setOnClickListener(view1 -> {
-            SQLiteDatabase db = getActivity().getBaseContext().openOrCreateDatabase("app.db", MODE_PRIVATE, null);
-            db.execSQL("delete from refuels");
 
-            db.close();
+            builder = new AlertDialog.Builder(this.getActivity());
+
+            builder.setTitle("Вы уверены?");
+
+            builder.setPositiveButton("Да", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    SQLiteDatabase db = getActivity().getBaseContext().openOrCreateDatabase("app.db", MODE_PRIVATE, null);
+                    db.execSQL("delete from refuels");
+
+                    db.close();
+                    dialogInterface.dismiss();
+                }
+            });
+
+            builder.setNegativeButton("Нет", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    dialogInterface.dismiss();
+                }
+            });
+
+            dialog = builder.create();
+            dialog.show();
+
+//            SQLiteDatabase db = getActivity().getBaseContext().openOrCreateDatabase("app.db", MODE_PRIVATE, null);
+//            db.execSQL("delete from refuels");
+//
+//            db.close();
         });
 
 

@@ -14,7 +14,7 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#AAAAAA">
+        android:background="#6E6E6E">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -183,11 +183,14 @@
 
             <Button
                 android:id="@+id/cleanInfoButton"
+                style="@style/Widget.Material3.Button.UnelevatedButton"
+                android:textSize="16sp"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
-                android:text="Сборс данных"
                 android:layout_marginStart="5dp"
-                android:layout_marginTop="200dp"
+                android:layout_marginTop="160dp"
+
+                android:text="Сборс данных"
                 />
 
         </LinearLayout>

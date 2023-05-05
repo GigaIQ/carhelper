@@ -54,7 +54,7 @@ public class HistoryFragment extends Fragment {
             double liter = litersList.get(litersList.size() - 1);
             double price = priceList.get(priceList.size() - 1) ;
 
-            for (int i = litersList.size() - 2; i >= 0; i--) {
+            for (int i = litersList.size() - 1; i >= 0; i--) {
                 try {
                     diff = distanceList.get(i + 1) - distanceList.get(i );
                     allCoast = priceList.get(i) * litersList.get(i);

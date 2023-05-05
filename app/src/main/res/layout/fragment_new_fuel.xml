@@ -13,7 +13,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#A9A9A9">
+        android:background="#DC575757">
         <EditText
             android:id="@+id/fuelAdd"
             style="@style/Widget.AppCompat.AutoCompleteTextView"
@@ -21,10 +21,11 @@
             android:layout_height="52sp"
             android:layout_marginTop="35sp"
             android:ems="7"
+            android:textColorHint="@color/white"
             android:hint="0"
             android:inputType="number"
             android:singleLine="false"
-            android:textColor="#000000"
+            android:textColor="@color/white"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.923"
@@ -39,33 +40,34 @@
             android:layout_height="55sp"
             android:layout_marginTop="55sp"
             android:layout_marginEnd="10sp"
+            android:textColorHint="@color/white"
             android:ems="7"
             android:inputType="number"
             android:singleLine="false"
-            android:textColor="#000000"
             android:textSize="20sp"
             android:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/white"
             app:layout_constraintHorizontal_bias="0.961"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/fuelAdd"
             tools:ignore="MissingConstraints"
             tools:visibility="visible" />
 
-        <!--            android:hint="@{inf.lastDistance}"-->
 
         <EditText
             android:id="@+id/litrePrice"
             style="@style/Widget.AppCompat.AutoCompleteTextView"
             android:layout_width="wrap_content"
             android:layout_height="55sp"
+            android:textColor="@color/white"
             android:layout_marginTop="145sp"
             android:layout_marginEnd="10sp"
             android:ems="7"
             android:hint="0"
             android:inputType="numberDecimal"
             android:singleLine="false"
-            android:textColor="#000000"
+            android:textColorHint="@color/white"
             android:textSize="20sp"
             android:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
@@ -144,6 +146,8 @@
             android:layout_marginBottom="30sp"
             android:onClick="refuelComplete"
             android:text="готово"
+            style="@style/Widget.Material3.Button.UnelevatedButton"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -163,6 +167,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="35sp"
                 android:buttonTint="#0BD8FD"
+                android:textColor="@color/white"
                 android:text="92" />
 
             <RadioButton
@@ -171,13 +176,15 @@
                 android:layout_height="36sp"
                 android:buttonTint="#0BD8FD"
                 android:checked="true"
-                android:clickable="false"
+                android:textColor="@color/white"
+                android:clickable="true"
                 android:text="95" />
 
             <RadioButton
                 android:id="@+id/gas"
                 android:layout_width="match_parent"
                 android:layout_height="36sp"
+                android:textColor="@color/white"
                 android:buttonTint="#0BD8FD"
                 android:text="Газ" />
 
@@ -186,6 +193,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="36sp"
                 android:buttonTint="#0BD8FD"
+                android:textColor="@color/white"
                 android:checked="false"
                 android:text="ДТ" />
         </RadioGroup>

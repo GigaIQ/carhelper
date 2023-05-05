@@ -27,7 +27,7 @@ public class InformationFragment extends Fragment {
     FragmentInformationBinding binding;
 
     String gotResponse = "";
-    String finishPrice = "";
+    String finishPrice = "...";
 
 
     @SuppressLint("SetTextI18n")

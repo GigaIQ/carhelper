@@ -3,7 +3,7 @@
     <item
         android:id="@+id/newFuelFragment"
         android:title=""
-        android:icon="@drawable/baseline_add_circle_24"
+        android:icon="@drawable/baseline_local_gas_station_24"
         />
 
     <item

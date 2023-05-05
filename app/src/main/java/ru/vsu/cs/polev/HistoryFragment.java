@@ -45,7 +45,7 @@ public class HistoryFragment extends Fragment {
                 priceList.add(query.getDouble(2));
             }
         } catch (Exception ex) {
-
+            ex.printStackTrace();
         }
         query.close();
         db.close();
@@ -69,8 +69,7 @@ public class HistoryFragment extends Fragment {
                 } catch (Exception ex) {
                     ex.printStackTrace();
                 }
-//                price = Double.parseDouble(new DecimalFormat("0.00").format(price));
-//                allCoast = Double.parseDouble(new DecimalFormat("0.0").format(allCoast));
+
                 if (i != litersList.size() - 1) {
                     items.add(new Item(String.valueOf(liter), Double.toString(diff), Double.toString(price), Double.toString(allCoast)));
                 }

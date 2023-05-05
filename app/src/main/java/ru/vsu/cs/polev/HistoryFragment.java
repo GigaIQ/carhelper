@@ -36,7 +36,7 @@ public class HistoryFragment extends Fragment {
         SQLiteDatabase db = getActivity().getBaseContext().openOrCreateDatabase("app.db", MODE_PRIVATE, null);
         Cursor query = db.rawQuery("SELECT * FROM refuels;", null);
         ArrayList<Double> litersList = new ArrayList<>();
-        ArrayList<Double> distanceList =new ArrayList<>();
+        ArrayList<Double> distanceList = new ArrayList<>();
         ArrayList<Double> priceList = new ArrayList<>();
         try {
             while(query.moveToNext()){
@@ -52,12 +52,12 @@ public class HistoryFragment extends Fragment {
 
         try {
             double allCoast = priceList.get(priceList.size() - 1);
-            allCoast = Double.parseDouble(new DecimalFormat("0.0").format(allCoast));
+//            allCoast = Double.parseDouble(new DecimalFormat("0.0").format(allCoast));
             double diff = 0;
             double liter = litersList.get(litersList.size() - 1);
             double price = priceList.get(priceList.size() - 1) ;
 
-            for (int i = litersList.size() - 1; i >= 0; i--) {
+            for (int i = litersList.size() - 2; i >= 0; i--) {
                 try {
                     diff = distanceList.get(i + 1) - distanceList.get(i );
                     allCoast = priceList.get(i) * litersList.get(i);
@@ -69,8 +69,8 @@ public class HistoryFragment extends Fragment {
                 } catch (Exception ex) {
                     ex.printStackTrace();
                 }
-                price = Double.parseDouble(new DecimalFormat("0.00").format(price));
-                allCoast = Double.parseDouble(new DecimalFormat("0.0").format(allCoast));
+//                price = Double.parseDouble(new DecimalFormat("0.00").format(price));
+//                allCoast = Double.parseDouble(new DecimalFormat("0.0").format(allCoast));
                 if (i != litersList.size() - 1) {
                     items.add(new Item(String.valueOf(liter), Double.toString(diff), Double.toString(price), Double.toString(allCoast)));
                 }
@@ -81,6 +81,7 @@ public class HistoryFragment extends Fragment {
             }
         }catch (Exception ex) {
             System.out.println(ex);
+            ex.printStackTrace();
         }
 
         if (litersList.size() == 0) {

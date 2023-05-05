@@ -8,9 +8,7 @@
         android:id="@+id/informationFragment"
         android:name="ru.vsu.cs.polev.InformationFragment"
         android:label="InformationFragment" >
-        <action
-            android:id="@+id/action_informationFragment_to_expensesFragment"
-            app:destination="@id/expensesFragment" />
+
         <action
             android:id="@+id/action_informationFragment_to_historyFragment"
             app:destination="@id/historyFragment" />
@@ -18,11 +16,7 @@
             android:id="@+id/action_informationFragment_to_newFuelFragment"
             app:destination="@id/newFuelFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/expensesFragment"
-        android:name="ru.vsu.cs.polev.ExpensesFragment"
-        android:label="fragment_expenses"
-        tools:layout="@layout/fragment_expenses" />
+
     <fragment
         android:id="@+id/historyFragment"
         android:name="ru.vsu.cs.polev.HistoryFragment"

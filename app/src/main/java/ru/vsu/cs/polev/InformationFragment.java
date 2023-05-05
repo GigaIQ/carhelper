@@ -139,9 +139,8 @@ public class InformationFragment extends Fragment {
         for (int i = 0; i < distanceList.size(); i++) {
             allCoast += priceList.get(i) * litersList.get(i);
         }
-        double ans = allCoast / allDistance;
-        ans = Double.parseDouble(new DecimalFormat("0.00").format(ans));
-        return ans;
+        //        ans = Double.parseDouble(new DecimalFormat("0.00").format(ans));
+        return allCoast / allDistance;
     }
 
     private double getAllFuelCost() {
@@ -167,7 +166,7 @@ public class InformationFragment extends Fragment {
         if (fuelList.size() == 0) {
             return 0.0;
         }
-        return allCoast;
+        return Math.round(allCoast);
     }
 
     private double getAllDistance() {

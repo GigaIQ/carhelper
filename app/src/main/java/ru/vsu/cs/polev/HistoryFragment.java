@@ -76,7 +76,7 @@ public class HistoryFragment extends Fragment {
                 }
             }
         }catch (Exception ex) {
-            System.out.println(ex);
+
             ex.printStackTrace();
         }
 

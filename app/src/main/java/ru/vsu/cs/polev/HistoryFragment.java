@@ -50,7 +50,6 @@ public class HistoryFragment extends Fragment {
 
         try {
             double allCoast = priceList.get(priceList.size() - 1);
-//            allCoast = Double.parseDouble(new DecimalFormat("0.0").format(allCoast));
             double diff = 0;
             double liter = litersList.get(litersList.size() - 1);
             double price = priceList.get(priceList.size() - 1) ;

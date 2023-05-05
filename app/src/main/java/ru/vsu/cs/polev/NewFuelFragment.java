@@ -33,7 +33,6 @@ public class NewFuelFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_new_fuel, container, false);
-
         fuelAdd = view.findViewById(R.id.fuelAdd);
         distanceAdd = view.findViewById(R.id.distanceAdd);
         litrePrice = view.findViewById(R.id.litrePrice);

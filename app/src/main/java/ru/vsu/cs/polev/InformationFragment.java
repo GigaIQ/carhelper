@@ -139,7 +139,6 @@ public class InformationFragment extends Fragment {
         for (int i = 0; i < distanceList.size(); i++) {
             allCoast += priceList.get(i) * litersList.get(i);
         }
-        //        ans = Double.parseDouble(new DecimalFormat("0.00").format(ans));
         return allCoast / allDistance;
     }
 

@@ -6,6 +6,7 @@
     android:layout_height="wrap_content"
     android:background="#AAAAAA">
 
+
     <TextView
         android:id="@+id/liter"
         android:layout_width="wrap_content"

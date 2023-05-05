@@ -38,12 +38,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-//        HttpResponse<String> response = Unirest.get("https://api.collectapi.com/gasPrice/stateUsaPrice?state=WA")
-//                .header("content-type", "application/json")
-//                .header("authorization", "apikey your_token")
-//                .asString();
-
-
     }
 
 
@@ -52,9 +46,6 @@ public class MainActivity extends AppCompatActivity {
         navController.popBackStack();
     }
 
-    public String getPrice() {
-//        return String.valueOf(Double.parseDouble(finishPrice) * 90);
-        return  finishPrice;
-    }
+
 
 }

@@ -29,8 +29,6 @@ public class HistoryFragment extends Fragment {
                              Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_history, container, false);
 
-//        RecyclerView recyclerView = getActivity().findViewById(R.id.recycleView);
-
         List<Item> items = new ArrayList<>();
 
         SQLiteDatabase db = getActivity().getBaseContext().openOrCreateDatabase("app.db", MODE_PRIVATE, null);

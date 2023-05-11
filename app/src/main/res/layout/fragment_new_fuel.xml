@@ -3,17 +3,17 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="ru.vsu.cs.polev.NewFuelFragment">
+    tools:context="ru.vsu.cs.polev.refuel.NewFuelFragment">
     <data>
         <variable
             name="inf"
-            type="ru.vsu.cs.polev.NewFuelFragment" />
+            type="refuel.NewFuelFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#DC575757">
+        android:background="@drawable/gradient">
         <EditText
             android:id="@+id/fuelAdd"
             style="@style/Widget.AppCompat.AutoCompleteTextView"

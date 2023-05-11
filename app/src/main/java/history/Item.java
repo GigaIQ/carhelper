@@ -1,4 +1,4 @@
-package ru.vsu.cs.polev;
+package history;
 
 public class Item {
     String liter = "";

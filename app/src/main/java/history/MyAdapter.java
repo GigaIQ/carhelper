@@ -1,4 +1,4 @@
-package ru.vsu.cs.polev;
+package history;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,6 +8,10 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
+
+import history.Item;
+import history.MyViewHolder;
+import ru.vsu.cs.polev.R;
 
 public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
 

@@ -6,7 +6,7 @@
     app:startDestination="@id/informationFragment">
     <fragment
         android:id="@+id/informationFragment"
-        android:name="ru.vsu.cs.polev.InformationFragment"
+        android:name="information.InformationFragment"
         android:label="InformationFragment" >
 
         <action
@@ -19,12 +19,12 @@
 
     <fragment
         android:id="@+id/historyFragment"
-        android:name="ru.vsu.cs.polev.HistoryFragment"
+        android:name="history.HistoryFragment"
         android:label="fragment_history"
         tools:layout="@layout/fragment_history" />
     <fragment
         android:id="@+id/newFuelFragment"
-        android:name="ru.vsu.cs.polev.NewFuelFragment"
+        android:name="refuel.NewFuelFragment"
         android:label="fragment_new_fuel"
         tools:layout="@layout/fragment_new_fuel" />
 </navigation>

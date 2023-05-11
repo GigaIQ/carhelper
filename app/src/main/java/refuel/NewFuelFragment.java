@@ -1,4 +1,4 @@
-package ru.vsu.cs.polev;
+package refuel;
 
 import static android.content.Context.MODE_PRIVATE;
 
@@ -17,6 +17,9 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+
+import ru.vsu.cs.polev.MainActivity;
+import ru.vsu.cs.polev.R;
 
 public class NewFuelFragment extends Fragment {
 

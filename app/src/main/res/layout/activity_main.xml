@@ -24,6 +24,7 @@
             style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
             tools:ignore="MissingConstraints"
             app:layout_constraintBottom_toBottomOf="parent"
+
             app:menu="@menu/nav_menu"
             app:itemIconSize="35sp"
             />

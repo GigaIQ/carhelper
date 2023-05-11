@@ -1,4 +1,4 @@
-package ru.vsu.cs.polev;
+package information;
 
 import static android.content.Context.MODE_PRIVATE;
 
@@ -23,6 +23,7 @@ import java.util.ArrayList;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import ru.vsu.cs.polev.R;
 import ru.vsu.cs.polev.databinding.FragmentInformationBinding;
 
 public class InformationFragment extends Fragment {
@@ -31,7 +32,6 @@ public class InformationFragment extends Fragment {
 
     private AlertDialog dialog;
     private AlertDialog.Builder builder;
-    private String[] items = {"Да", "Нет"};
 
     String gotResponse = "";
     String finishPrice = "...";

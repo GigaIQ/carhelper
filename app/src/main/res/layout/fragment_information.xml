@@ -192,7 +192,7 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="210dp"
                 android:backgroundTint="@color/design_default_color_error"
-                android:text="Сборс данных"
+                android:text="Сброс данных"
                 />
 
         </LinearLayout>

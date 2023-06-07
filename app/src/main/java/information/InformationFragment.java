@@ -107,10 +107,6 @@ public class InformationFragment extends Fragment {
             dialog = builder.create();
             dialog.show();
 
-//            SQLiteDatabase db = getActivity().getBaseContext().openOrCreateDatabase("app.db", MODE_PRIVATE, null);
-//            db.execSQL("delete from refuels");
-//
-//            db.close();
         });
 
 
@@ -119,8 +115,8 @@ public class InformationFragment extends Fragment {
 
 
     private String getPrice(String str) {
-        String input = "currency:\"euro\" lpg:\"0,264\" diesel:\"0,578\" gasoline:\"0,572\" country:\"Russia\"";
-        String[] parts = input.split(" ");
+//        String input = "currency:\"euro\" lpg:\"0,264\" diesel:\"0,578\" gasoline:\"0,592\" country:\"Russia\"";
+        String[] parts = str.split(" ");
         String gasolinePrice = "";
         String countryName = "Russia";
 
@@ -132,7 +128,7 @@ public class InformationFragment extends Fragment {
             }
         }
 
-        String[] countryParts = input.split("country:\"" + countryName + "\"");
+        String[] countryParts = str.split("country:\"" + countryName + "\"");
         if (countryParts.length > 1) {
             String[] gasolineParts = countryParts[1].split("gasoline:\"");
             if (gasolineParts.length > 1) {

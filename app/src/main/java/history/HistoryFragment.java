@@ -22,9 +22,7 @@ import ru.vsu.cs.polev.R;
 import ru.vsu.cs.polev.databinding.FragmentHistoryBinding;
 
 public class HistoryFragment extends Fragment {
-
     FragmentHistoryBinding binding;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -61,13 +59,9 @@ public class HistoryFragment extends Fragment {
                     allCoast = priceList.get(i) * litersList.get(i);
                     liter = litersList.get(i);
                     price = priceList.get(i);
-
-
-
                 } catch (Exception ex) {
                     ex.printStackTrace();
                 }
-
                 if (i != litersList.size() - 1) {
                     items.add(new Item(String.valueOf(liter), Double.toString(diff), Double.toString(price), Double.toString(allCoast)));
                 }

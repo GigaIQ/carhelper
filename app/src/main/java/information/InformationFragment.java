@@ -4,21 +4,19 @@ import static android.content.Context.MODE_PRIVATE;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
-import android.app.DatePickerDialog;
 import android.content.DialogInterface;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-
-
-import androidx.databinding.DataBindingUtil;
-import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.databinding.DataBindingUtil;
+import androidx.fragment.app.Fragment;
+
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -67,8 +65,6 @@ public class InformationFragment extends Fragment {
             }
         });
         gfgThread.start();
-
-
 
         try {
             binding.fuelCount.setText(grtAvengereFuelLos());
